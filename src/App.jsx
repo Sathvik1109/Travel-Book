@@ -9,6 +9,7 @@ import CityList from "./components/CityList";
 
 // Hooks
 import { useEffect, useState } from "react";
+import CountriesList from "./components/CountriesList";
 
 const App = () => {
   const [cities, setCities] = useState([]);
@@ -50,7 +51,10 @@ const App = () => {
               path="cities"
               element={<CityList cities={cities} loading={loading} />}
             />
-            <Route path="countries" element={<p>Countries</p>} />
+            <Route
+              path="countries"
+              element={<CountriesList cities={cities} />}
+            />
             <Route path="form" element={<p>Form</p>} />
           </Route>
           <Route path="*" element={<PageNotFound />} />
