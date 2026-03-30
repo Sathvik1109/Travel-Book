@@ -1,4 +1,7 @@
+import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+// Components
 import Product from "./pages/Product";
 import Pricing from "./pages/Pricing";
 import PageNotFound from "./pages/PageNotFound";
@@ -6,10 +9,7 @@ import AppLayout from "./pages/AppLayout";
 import Homepage from "./pages/Homepage";
 import Login from "./pages/Login";
 import CityList from "./components/CityList";
-
-// Hooks
-import { useEffect, useState } from "react";
-import CountriesList from "./components/CountriesList";
+import CountryList from "./components/CountryList";
 
 const App = () => {
   const [cities, setCities] = useState([]);
@@ -53,7 +53,7 @@ const App = () => {
             />
             <Route
               path="countries"
-              element={<CountriesList cities={cities} />}
+              element={<CountryList loading={loading} cities={cities} />}
             />
             <Route path="form" element={<p>Form</p>} />
           </Route>
