@@ -3,6 +3,8 @@ import styles from "./CityList.module.css";
 import Spinner from "./Spinner";
 import Message from "./Message";
 
+import { useCities } from "../contexts/CitiesContext";
+
 /*
 const CityList = ({ cities, loading }) => {
   const safeCities = Array.isArray(cities) ? cities : [];
@@ -19,7 +21,8 @@ const CityList = ({ cities, loading }) => {
 };
 */
 
-const CityList = ({ cities, loading }) => {
+const CityList = () => {
+  const { cities, loading } = useCities();
   if (loading) return <Spinner />;
 
   if (!cities.length)
