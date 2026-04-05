@@ -33,11 +33,19 @@ const Map = () => {
     if (mapLat && mapLng) setMapPosition([mapLat, mapLng]);
   }, [mapLat, mapLng]);
 
+  useEffect(() => {
+    if (geoLocationPosition)
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setMapPosition([geoLocationPosition.lat, geoLocationPosition.lng]);
+  }, [geoLocationPosition]);
+
   return (
     <div className={styles.mapContainer}>
-      <Button type="position" onClick={getPosition}>
-        {isLoading ? "Loading..." : "Use your position"}
-      </Button>
+      {!geoLocationPosition && (
+        <Button type="position" onClick={getPosition}>
+          {isLoading ? "Loading..." : "Use your position"}
+        </Button>
+      )}
       <MapContainer
         center={mapPosition}
         zoom={6}
