@@ -37,42 +37,6 @@
       "id": 98443197
     },
     {
-      "cityName": "Campillo de Duenas",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2026-04-06T15:18:26.338Z",
-      "notes": "Test",
-      "position": {
-        "lat": "40.88029480552824",
-        "lng": "-1.6259765625"
-      },
-      "id": 98443198
-    },
-    {
-      "cityName": "Navalmoral de la Mata",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2026-04-06T15:18:43.931Z",
-      "notes": "TEst",
-      "position": {
-        "lat": "39.926588421909436",
-        "lng": "-5.537109375000001"
-      },
-      "id": 98443199
-    },
-    {
-      "cityName": "Saelices",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2026-04-06T15:20:11.637Z",
-      "notes": "Test",
-      "position": {
-        "lat": "39.87601941962116",
-        "lng": "-2.79052734375"
-      },
-      "id": 98443200
-    },
-    {
       "cityName": "Aroche",
       "country": "Spain",
       "emoji": "🇪🇸",
